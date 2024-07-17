@@ -17,9 +17,7 @@ if __name__ == "__main__":
     """
 
     summary_template = """
-    given the information about a person from I want you to create:
-    1. a short summary
-    2. two interesting facts about them
+    Write me a song
     """
 
     summary_prompt_template = PromptTemplate(
@@ -27,7 +25,7 @@ if __name__ == "__main__":
     )
 
     # llm = ChatOpenAI(temperature=0, model_name="gpt-3.5-turbo")
-    llm = ChatOllama(model="llama3")
+    llm = ChatOllama(model="mistral")
 
     chain = summary_prompt_template | llm | StrOutputParser()
     res = chain.invoke(input={"information": information})

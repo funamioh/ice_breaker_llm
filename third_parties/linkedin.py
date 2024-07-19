@@ -15,7 +15,7 @@ def scrape_linkedin_profile(linkedin_profile_url: str, mock: bool = False):
     Manually scrape the information from the linkedIn profile"""
 
     if mock:
-        linkedin_profile_url = "https://www.linkedin.com/in/miho-funayama-653b391b4/"
+        linkedin_profile_url = "https://gist.githubusercontent.com/funamioh/18746a8bd5efd3273e91e5439b809362/raw/e92bff512353f0605fc73a72edc5567f4b89c0ad/miho-funayma.json"
         response = requests.get(
             linkedin_profile_url,
             timeout=10,
